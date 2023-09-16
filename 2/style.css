@@ -1,0 +1,28 @@
+.nav {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav > li {
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.nav  li  a {
+    text-decoration: none;
+    color: gray;
+}
+
+.nav img {
+    width: 90px;
+    height: 50px;
+    display: flex; 
+    order: 1;
+    margin-left: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
