@@ -26,3 +26,52 @@
 html {
     scroll-behavior: smooth;
 }
+
+footer {
+    width: 100%;
+    height: auto;
+    background: rgb(25, 0, 68);
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    opacity: 0.85;
+}
+footer a {
+    all: unset;
+    color: aliceblue;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+footer address a:hover {
+    border-bottom: 1px solid aliceblue;
+}
+
+footer address a:active{
+    color: #666;
+    all: unset;
+}
+
+main li a:visited{
+    color: blueviolet;
+}
+
+main li a:active{
+    color: aqua;
+}
+
+main li:nth-child(4){
+    text-transform: uppercase;
+}
+
+main li:last-child:visited{
+    color: red;
+}
+
+#second-info h2{
+    color: black;
+    font-family: 'Playfair Display', serif;
+}
