@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    height: 100px;
+    width: 100%;
+}
+.logo{
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    float: left;
+}
+
+nav{
+    position: sticky;
+}
+.header > .logo > a > img{
+    width: 50px;
+    height: 50%;
+    transition: 1s;
+}
+.imglogo:hover{
+    
+    transform: scale(1.2);
+}
+
+.nav-links{
+    display: block;
+    text-align: center;
+}
+
+.nav-links ul li {
+    list-style: none;
+    float: right;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.nav-links ul li a{
+    display: block;
+    text-decoration: none;
+    font-family: 'Pacifico', 'cursive';
+    font-size: 30px;
+    color: white;
+    transition: 0.5s;
+
+}
+
+.nav-links ul li a:hover{
+    transform: scale(1.1);
+}
+
+.bg{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(349deg, rgb(44 9 120) 0%, rgba(41,9,121,1) 49%, rgb(255 120 0) 100%);
+}
+#FirstPage{
+    margin: 20px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content:nth-child(even){
+    margin-left: auto;
+}
+
+.content{
+    
+    display: flex;
+    max-width: 46%;
+    width: 100%;
+    background: #ffffff29;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.7s ease-in-out;
+}
+
+.content:hover{
+    transform: scale(1.05);
+    background-color: aliceblue;
+}
+
+.content > img{
+    border-radius: inherit;
+}
+.text1{
+    margin: auto 20px 20px 20px;
+}
