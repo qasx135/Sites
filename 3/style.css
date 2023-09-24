@@ -6,6 +6,9 @@
 .header{
     height: 100px;
     width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 .logo{
     display: block;
@@ -15,9 +18,6 @@
     float: left;
 }
 
-nav{
-    position: sticky;
-}
 .header > .logo > a > img{
     width: 50px;
     height: 50%;
@@ -91,7 +91,7 @@ body{
 }
 
 .content:hover{
-    transform: scale(1.05);
+    /* transform: scale(1.03); */
     background-color: aliceblue;
 }
 
@@ -100,4 +100,21 @@ body{
 }
 .text1{
     margin: auto 20px 20px 20px;
+}
+
+.bg_footer{
+    width: 100%;
+    height: 200px;
+    background: black;
+}
+
+.block{
+    height: 30px;
+    width: 30px;
+    background: white;
+}
+.block2{
+    height: 30px;
+    width: 30px;
+    background: red;
 }
