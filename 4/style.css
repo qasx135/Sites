@@ -1,0 +1,175 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Header here*/
+.header{
+    height: 100px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.logo{
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    float: left;
+}
+
+.header > .logo > a > img{
+    width: 50px;
+    height: 50%;
+    transition: 1s;
+}
+.imglogo:hover{
+    
+    transform: scale(1.2);
+}
+
+.nav-links{
+    display: block;
+    text-align: center;
+}
+
+.nav-links ul li {
+    list-style: none;
+    float: right;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.nav-links ul li a{
+    display: block;
+    text-decoration: none;
+    font-family: 'Pacifico', 'cursive';
+    font-size: 30px;
+    color: white;
+    transition: 0.5s;
+
+}
+
+.nav-links ul li a:hover{
+    transform: scale(1.1);
+}
+
+/* Body coming */
+.bg{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+/* Body */
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(349deg, rgb(44 9 120) 0%, rgba(41,9,121,1) 49%, rgb(255 120 0) 100%);
+}
+main{
+    flex-grow: 1;
+}
+#FirstPage{
+    margin: 20px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content:nth-child(even){
+    margin-left: auto;
+}
+
+.content{
+    display: flex;
+    max-width: 46%;
+    width: 100%;
+    max-height: 270px;
+    background: #ffffff8a;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.7s ease-in-out;
+}
+
+.content:hover{
+    /* transform: scale(1.03); */
+    background-color: aliceblue;
+}
+
+.content > img{
+    border-radius: inherit;
+}
+.text1{
+    margin: auto 20px 20px 20px;
+}
+
+footer{
+    flex-grow: 0;
+}
+
+.bg_footer{
+    width: 100%;
+    background: #000000a3;
+}
+
+footer > .bg_footer > .footer_nav ul li{
+    color: aliceblue;
+}
+
+/*Styles for form*/
+.blocks{
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.blocks-fields{
+    justify-content: left;
+}
+.blocks-field{
+    display: block;
+    margin-bottom: 1rem;
+}
+.text-field_label_text{
+    margin-bottom: 0.25rem;
+}
+.text-field_input_text{
+    display: block;
+    font-size: 1rem;
+
+}
+.blocks-choice{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: fit-content;
+}
+.from_check{
+    
+    background-color: #fff;
+}
+
+.blocks-choice > fieldset{
+    border: none;
+    background: #fff0;
+}
+.second_blocks > textarea::placeholder{
+    color: black;
+}
+textarea{
+    display: block;
+    margin: 0 auto;
+}
+.map_yandex{
+    padding: 100px;
+    margin: 0 auto;
+    width: fit-content;
+}
+.video{
+    display: block;
+    margin: 0 auto;
+}
