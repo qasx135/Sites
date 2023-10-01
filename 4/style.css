@@ -140,8 +140,10 @@ footer > .bg_footer > .footer_nav ul li{
 .text-field_input_text{
     display: block;
     font-size: 1rem;
+    border: 1px solid #111;
 
 }
+
 .blocks-choice{
     display: flex;
     flex-direction: column;
@@ -172,4 +174,25 @@ textarea{
 .video{
     display: block;
     margin: 0 auto;
+}
+
+.blocks-fields input{
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 0px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.3);
+}
+.blocks-fields label{
+    color: #fff;
+}
+.button{
+    padding: 10px;
+}
+button{
+    cursor: pointer;
+    background-color:#3F51B5;
+    color:#fff;
+    border: 0;
+    padding: 5px;
+    border-radius: 20px;
 }
