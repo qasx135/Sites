@@ -1,22 +1,152 @@
-*, *::before, *::after{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
 /*Header here*/
-.header{
+header {
     display: flex;
     height: 100px;
     width: 100%;
     padding: 20px;
-    align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 992px) {
+        align-items: center;
+    }
 }
 
-#burger{
+.logo {
+    z-index: 10;
+    display: block;
+    height: min-content;
+}
+
+header > .logo > img {
+    width: 50px;
+    height: 50px;
+    transition: 1s;
+}
+
+.imglogo:hover {
+    transform: scale(1.2);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+
+    @media (max-width: 992px) {
+        width: 100%;
+        height: 100dvh;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        background: #00000085;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all 1s ease;
+    }
+}
+
+.nav-links > a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-family: "Pacifico", cursive;
+    height: fit-content;
+}
+
+.notifications {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    height: fit-content;
+
+    @media (max-width: 992px) {
+        position: absolute;
+        top: 20px;
+    }
+}
+
+.notifications > .uwed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    width: 100%;
+    min-width: 40px;
+    min-height: 40px;
+    transition-duration: 1s;
+    transition-property: background, border-radius;
+    transition-delay: 1s, 1s;
+}
+
+.notifications .uwed > img {
+    width: 20px;
+    height: 20px;
+}
+
+.notifications:hover > .uwed {
+    background: #3f51b5;
+    border-radius: 20px 20px 0 0;
+    transition-delay: 0s, 0s;
+}
+
+.notifications:hover > .notifications__list {
+    padding: 0 50px;
+    max-height: 100vh;
+    max-width: 100vh;
+    transition-duration: 1s;
+    transition-property: max-width, padding, max-height;
+    transition-delay: 0s, 0s, 1s;
+}
+
+.notifications > .uwed > span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50%;
+    background: #ff2c2c;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.notifications__list {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 0 0 20px 20px;
+    width: auto;
+    max-width: 0;
+    height: auto;
+    max-height: 0;
+    transition-duration: 1s;
+    transition-property: max-width, padding, max-height;
+    transition-delay: 1s, 1s, 0s;
+}
+
+.notifications__list-item {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.notifications__list-item:last-child {
+    margin-bottom: 10px;
+}
+
+#burger {
     width: 25px;
     height: 100%;
     position: absolute;
@@ -24,28 +154,23 @@
     opacity: 0;
     z-index: 2;
 }
-#burger:checked ~ .burger{
+#burger:checked ~ .burger {
     background: #fff0;
-
 }
 
-#burger:checked ~ .burger::after{
+#burger:checked ~ .burger::after {
     background: #fff;
     transform: rotate(45deg);
     top: 0;
 }
 
-#burger:checked ~ .burger::before{
+#burger:checked ~ .burger::before {
     background: #fff;
     transform: rotate(-45deg);
     top: 0;
 }
-/* body ~ #burger:checked{
-    overflow: hidden;
 
-} */
-
-.burger{
+.burger {
     display: none;
     height: 3px;
     min-width: 25px;
@@ -54,21 +179,21 @@
     border-radius: 20px;
     position: relative;
     transition: 1s all ease;
-    @media (max-width:992px) {
+    @media (max-width: 992px) {
         display: block;
     }
 }
 
-#burger{
+#burger {
     display: none;
-    @media (max-width:992px) {
+    @media (max-width: 992px) {
         display: block;
     }
 }
 
-.burger::after{
+.burger::after {
     transition: 1s all ease;
-    content: '';
+    content: "";
     height: 100%;
     width: 100%;
     background-color: #fff;
@@ -76,9 +201,9 @@
     top: 6px;
 }
 
-.burger::before{
+.burger::before {
     transition: 1s all ease;
-    content: '';
+    content: "";
     height: 100%;
     width: 100%;
     background-color: #fff;
@@ -86,178 +211,15 @@
     top: -6px;
 }
 
-.burger:checked{
+.burger:checked {
     background: #000;
     opacity: 1;
 }
-
-.logo{
-    display: block;
-    height: min-content;
-}
-
-.header > .logo > img{
-    width: 50px;
-    height: 50px;
-    transition: 1s;
-}
-.imglogo:hover{
-    
-    transform: scale(1.2);
-}
-
-.nav-links{
-    display: block;
-    transition: 1s all ease;
-    margin-left: auto;
-
-    @media (max-width:992px) {
-         position: fixed; 
-         right: -100%;  
-         height: 100dvh;
-         width: 100%;
-         top: 0;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         background: #0000004f;
-         
-    }
-}
-
-
-
-.nav-links ul {
-
-    @media (max-width:992px) {
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;   
-    }
-}
-
-
-
-
-
-
-
-
-
-
-.notifys{
-    background-color: #fff;
-    border-radius: 50%;
-    width: 42px;
-    height:42px;
-    position: relative;
-}
-
-
-.notifys img{
-    margin: 10px;
-    width: 20px;
-    height: 20px;
-}
-
-.notifys span{
-    display: block;
-    background-color: palevioletred;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    font-size: 15px;
-    text-align: center;
+#burger:checked + .nav-links {
+    visibility: visible;
     position: absolute;
-    top: 0;
-    right: -1px;
-}
-
-.notify-list{
-    font-family: 'Roboto', sans-serif;
-}
-
-.notify-list > ul{
-    transition: all 2s ease;
-    height: fit-content;
-    /* overflow: hidden; */
-    visibility: hidden;
-    padding: 20px;
-}
-
-
-
-.notify-list > ul > li {
-    margin-top: 15px;
-    margin-left: 15px;
-}
-
-.notifys:hover {
-    height: fit-content;
-    background-color: #3F51B5;
-    padding: 0;
-    width: fit-content;
-    border-radius: 20px 20px 0 0 ;
-}
-@keyframes not {
-    from{
-        padding: 0;
-        height: 0%;
-    }
-    to{
-        padding: 20px;
-        height: 100%;
-        
-    }
-}
-
-.notifys:hover .notify-list > ul{
-    /* height: 100px; */
-    visibility: visible;
-    animation-name: not;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-}
-
-
-
-
-
-
-
-
-
-
-#burger:checked + .nav-links{
-    visibility: visible;
-    position: absolute; 
     right: 0;
 }
-
-/* #burger:not(:checked) + .nav-links{
-    overflow: none;
-} */
-.nav-links ul li {
-    list-style: none;
-    float: right;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.nav-links ul li a{
-    display: block;
-    text-decoration: none;
-    font-family: 'Pacifico', 'cursive';
-    font-size: 30px;
-    color: white;
-    transition: 0.5s;
-
-}
-
-.nav-links ul li a:hover{
-    transform: scale(1.1);
-}
-
 /* Body coming */
 .bg{
     position: absolute;
@@ -314,7 +276,9 @@ main{
     }
 }
 
-
+.nav-links > a:hover{
+    transform: scale(1.2);
+}
 .content:hover{
     /* transform: scale(1.03); */
     background-color: aliceblue;
@@ -484,4 +448,53 @@ button{
     to {
         transform: translateX(calc(100vw - 140px));
     }
+}
+/* holder */
+.holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.holder .cial {
+    background: url("./images/cial.jpg") no-repeat top/cover;
+    /* background-size: 100% 100%; */
+    height: 300px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.holder .cial::before{
+    content: "";
+    background: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: -100%;
+    background: red;
+    transition: all 1s ease;
+}
+
+.holder .cial:hover::before {
+    top: 0;
+}
+
+.holder .cial:hover .nachinka {
+    bottom: 0;
+}
+.nachinka{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: #fff;
+    position: absolute;
+    bottom: -100%;
+    transition: all 1s ease;
 }
