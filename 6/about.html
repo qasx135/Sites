@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course work</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" alt="home" class="logo">
+            <img src="images/logo (1).png" alt="logo" class="imglogo">
+        </a>
+        <input type="checkbox" id="burger">
+        <div class="nav-links">
+            <ul>
+                <li><a href="apparati.html">Аппараты</a></li>
+                <li><a href="#">Об авторе</a></li>
+                <li><a href="about.html">Обратная связь</a></li>
+            </ul>  
+        </div>
+        <div class="burger"></div>
+    </header>
+    <img src="./images/starcover.png" class="bg">
+    <main>
+        <div class="blocks">
+            <form class="blocks-fields">
+                <div class="text-field">
+                    <label class="text-field_label_text" for="name">Имя</label>
+                    <input type="text" class="text-field_input_text" name="name" id="name" placeholder="Ваше имя">
+                </div>
+                <div class="tel-field">
+                    <label class="text-field_label_text" for="name">Телефон</label>
+                    <input type="tel" class="text-field_input_text" name="name" id="name" placeholder="Ваш номер телефона">
+                </div>
+                <div class="email-field">
+                    <label class="text-field_label_text" for="name">Email</label>
+                    <input type="email" class="text-field_input_text" name="name" id="name" placeholder="Ваша почта">
+                </div>
+                <div class="password-field">
+                    <label class="text-field_label_text" for="name">Пароль</label>
+                    <input type="password" class="text-field_input_text" name="name" id="name" placeholder="Ваш пароль">
+                </div>
+                <div class="datetimelocal-field">
+                    <label class="text-field_label_text" for="name">Дата рождения</label>
+                    <input type="datetime-local" class="text-field_input_text" name="name" id="name">
+                </div>
+                <div class="button">
+                    <button type="submit">Отправить</button>
+                    <button type="reset">Сбросить</button>
+                </div>
+            </form>
+            <form class="blocks-choice">
+                <fieldset>
+                    <legend>Сколько атрибутов у input</legend>
+                    <label>
+                        <input type="radio" name="answer" value="one">
+                        Один
+                    </label>
+                    <label>
+                        <input type="radio" name="answer" value="two">
+                        Два
+                    </label>
+                    <label>
+                        <input type="radio" name="answer" value="alot">
+                        Много
+                    </label>
+                </fieldset>
+                <div class="from_check">
+                    <label for="remeber">Запомнить меня ?</label>
+                    <input type="checkbox" name="remeber" id="remeber">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="bg_footer">
+            <nav class="footer_nav">
+                <ul>
+                    <li><a href="#">Smth</li></a>
+                    <li><a href="#">Smth</li></a>
+                    <li><a href="#">Smth</li></a>
+                    <li><a href="#">Smth</li></a>
+                    <li><a href="#">Smth</li></a>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
