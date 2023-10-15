@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .nav {
     display: flex;
     list-style: none;
@@ -24,8 +28,30 @@
     cursor: pointer;
 }
 
-html {
-    scroll-behavior: smooth;
+main li a:visited{
+    color: red;
+}
+
+main li a:active{
+    color: aqua;
+}
+
+main li:nth-child(4){
+    text-transform: uppercase;
+}
+
+aside{
+    width: 35px;
+    border-radius: 10%;
+    max-width: 150px;
+    min-width: 100px;
+    float: right;
+    background-color: aliceblue;
+}
+
+#second-info h2{
+    color: yellow;
+    font-family: 'Playfair Display', serif;
 }
 
 footer {
@@ -56,37 +82,9 @@ footer address a:active{
     all: unset;
 }
 
-main li a:visited{
-    color: blueviolet;
-}
-
-main li a:active{
-    color: aqua;
-}
-
-main li:nth-child(4){
-    text-transform: uppercase;
-}
-
-main li:last-child:visited{
-    color: red;
-}
-
-#second-info h2{
-    color: black;
-    font-family: 'Playfair Display', serif;
-}
-.wrapper{
+/* .wrapper{
     top: 0;
     left: 0;
     width: 100%;
     margin-bottom: 10px;
-}
-
-aside{
-    width: 20px;
-    max-width: 150px;
-    min-width: 100px;
-    float: right;
-    background-color: aliceblue;
-}
+} */
