@@ -1324,7 +1324,111 @@ button{
     filter: blur(6px);
 }
 
-.first:nth-child(1):has(.first:nth-child(2):hover), 
+.information-cards:has(.first:nth-child(2):hover) .first:nth-child(1), 
 .first:nth-child(2):hover ~ .first:nth-child(3){
-    filter: blur(10px);
+    filter: blur(6px);
+}
+.information-cards:has(.first:nth-child(3):hover) .first:nth-child(1), 
+.information-cards:has(.first:nth-child(3):hover) .first:nth-child(2){
+    filter: blur(6px);
+}
+
+.cards-2{
+    display: flex;
+    margin: 200px 0 200px 0;
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(0,78,255,1) 50%, rgba(94,0,255,1) 50%);;
+    width: 200px;
+    height: 250px;
+    position: relative;
+    color: #fff;
+    gap: 9px;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+}
+.card p{
+    text-align: center;
+    z-index: 1;
+}
+.card h1{
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 900;
+}
+.card::before{
+    content: "01";
+    color: #f0094a;
+    position: absolute;
+    top:30%;
+    right: 10px;
+    font-size: 34px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    opacity: 0.2;
+    transition: all 0.5s ease;
+}
+.card:hover::before{
+    top: 10px;
+    opacity: 1;
+}
+.card:hover{
+    opacity: 1;
+}
+.block:nth-child(1):hover ~ .block:nth-child(2), 
+.block:nth-child(1):hover ~ .block:nth-child(3){
+    opacity: 0.3;
+}
+
+.cards-2:has(.block:nth-child(2):hover) .block:nth-child(1), 
+.block:nth-child(2):hover ~ .block:nth-child(3){
+    opacity: 0.3;
+}
+.cards-2:has(.block:nth-child(3):hover) .block:nth-child(1), 
+.cards-2:has(.block:nth-child(3):hover) .block:nth-child(2){
+    opacity: 0.3;
+}
+.block{
+    width: 204px;
+    height: 254px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    
+}
+.block::before{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+    visibility: hidden;
+    background: linear-gradient(140deg, rgba(255,94,0,1) 17%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 51%, rgba(1,255,0,1) 87%);
+    /* animation-direction: alternate;     */
+}
+
+.block:hover::before{
+    visibility: visible;
+    animation-name: vrash;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes vrash {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
