@@ -1,0 +1,78 @@
+body {
+    background: #131a23;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.auth-button{
+    display: block;
+    width: 300px;
+    height: 150px;
+    border: none;
+    border-radius: 40px;
+    background: #5353a4;
+    margin: 0 auto;
+    position: relative; 
+    overflow: hidden;
+}
+.auth-button::before{
+    content: "";
+    background: wheat;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all 0.1s ease;
+}
+.auth-button:hover::before{
+    top: 0;
+}
+.auth-text{
+    font-size: 30px;
+    display: block;
+    position: relative;
+}
+
+.lovely-button{
+    display: flex;
+    width: 200px;
+    height: 100px;
+    background: white;
+    border: none;
+    border-radius: 40px;
+    margin: 0 auto;
+    flex-direction: row;
+    position: relative;
+    transition: all 0.3s ease; 
+    align-items: center;
+    justify-content: center;
+    gap :55px; 
+    z-index: 4; 
+}
+
+.lovely-button.new-color {
+    background: red;
+}
+.lovely-button:hover{
+    opacity: 0.9;
+}
+.lovely-button img {
+    height: 100px;
+    width: 100px;
+}
+
+.b-text{
+    font-size: 40px;
+}
+.new-image{
+    position: absolute;
+    width: 100px;
+}
