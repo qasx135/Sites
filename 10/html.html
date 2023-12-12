@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css.css" />
+    </head>
+    <body>
+        <div style="margin: 50px auto; width: fit-content">
+            <div class="capchaText">Капча: <span id="capcha"></span></div>
+            <input type="text" placeholder="введите капчу..." class="capchaInput" />
+            <br />
+            <button class="capchaButton" onclick="button()">Проверить</button>
+            <div class="errors"></div>
+        </div>
+        <div class="card">
+            <div class="text" id="tovar">корабль</div>
+            <div class="text" id="price">100 руб</div>
+            <button id="card" onclick="add()">Добавить</button>
+        </div>
+        <div class="basket" style="text-align: center; font-size: 30px; margin: 40px; color: #fff"></div>
+        <div class="textJS" style="text-align: center; margin: 30px">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, ea, rem suscipit optio fugiat mollitia at
+            quasi esse dolore cum quae cumque quam facere hic, perferendis natus omnis. Distinctio, eum.
+        </div>
+    </body>
+    <script src="./capcha.js"></script>
+    <script src="./basket.js"></script>
+    <script src="./text.js"></script>
+</html>
