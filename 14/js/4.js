@@ -1,36 +1,24 @@
-const slider = document.getElementById("slider");
-let isDragging = false;
-let startPosition = 0;
-let currentTranslate = 0;
-let prevTranslate = 0;
+let thumb = document.getElementById('thumb');
+    thumb.onmousedown = function(event) {
+      event.preventDefault();
+      let shiftX = event.clientX - thumb.getBoundingClientRect().left;
+      document.addEventListener('mousemove', onMouseMove);
+      document.addEventListener('mouseup', onMouseUp);
 
-slider.addEventListener("touchstart", touchStart);
-slider.addEventListener("touchmove", touchMove);
-slider.addEventListener("touchend", touchEnd);
+      function onMouseMove(event) {
+        let newPos = event.clientX - shiftX - slider.getBoundingClientRect().left;
+        if (newPos < 0) {
+          newPos = 0;
+        }
+        let rightEdge = slider.offsetWidth - thumb.offsetWidth;
+        if (newPos > rightEdge) {
+          newPos = rightEdge;
+        }
+        thumb.style.left = newPos + 'px';
+      }
 
-function touchStart(e) {
-    startPosition = e.touches[0].clientX;
-    isDragging = true;
-}
-
-function touchMove(e) {
-    if (!isDragging) return;
-
-    const currentPosition = e.touches[0].clientX;
-    const distance = currentPosition - startPosition;
-
-    currentTranslate = prevTranslate + distance;
-
-    slider.style.transform = "translateX(" + currentTranslate + "px)";
-}
-
-function touchEnd() {
-    isDragging = false;
-    prevTranslate = currentTranslate;
-}
-
-const rangeInput = document.querySelector(".range");
-
-rangeInput.addEventListener("input", function () {
-    slider.style.transform = "translateX(" + -rangeInput.value * 2 + "%)";
-});
+      function onMouseUp() {
+        document.removeEventListener('mouseup', onMouseUp);
+        document.removeEventListener('mousemove', onMouseMove);
+      }
+    };
