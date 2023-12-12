@@ -36,7 +36,6 @@ header > .logo > img {
 .nav-links {
     display: flex;
     gap: 24px;
-
     @media (max-width: 992px) {
         width: 100%;
         height: 100dvh;
@@ -58,6 +57,8 @@ header > .logo > img {
     font-size: 24px;
     font-family: "Pacifico", cursive;
     height: fit-content;
+    transition: all 1s easy;
+
 }
 
 .notifications {
@@ -403,7 +404,7 @@ button{
     }
 }
 
-/* animations */
+/* animations only kubik to circle*/
 .animations{
     display: flex;
     flex-direction: column;
@@ -449,7 +450,7 @@ button{
         transform: translateX(calc(100vw - 140px));
     }
 }
-/* holder */
+/* holder vse chto nize nuzhno pokazat*/
 .holder{
     display: flex;
     flex-wrap: wrap;
