@@ -130,6 +130,13 @@ ul {
 }
 
 /* лаба6 */
+.cont-fig {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
 #circle {
     width: 100px;
     height: 100px;

@@ -13,7 +13,7 @@ const priceText = document.querySelector("#priceText");
 //     });
 // }
 // Task 14
-
+let elB
 const products = document.querySelectorAll(".product");
 for (let i = 0; i < products.length; i++) {
     products[i].onmousedown = function(event) {
@@ -35,24 +35,25 @@ for (let i = 0; i < products.length; i++) {
 
         function onMouseMove(event) {
             moveAt(event.pageX, event.pageY);
+            newOb.hidden = true;
+            elB = document.elementFromPoint(event.clientX, event.clientY);
+            newOb.hidden = false;
+            
+            
         }
         document.addEventListener('mousemove', onMouseMove);
+        
         newOb.onmouseup = function() {
-            newOb.hidden = true;
-            let elB = document.elementFromPoint(event.clientX, event.clientY);
-            newOb.hidden = false;
+            
 
-            let trash = document.querySelector('.basket');
-            if (!trash) {
+            let drop = elB.closest('.basket');
+            console.log(drop);
+            if (!drop) {
                 document.removeEventListener('mousemove', onMouseMove);
                 newOb.onmouseup = null;
                 newOb.remove();
                 return false;
             }
-
-
-
-
             document.removeEventListener('mousemove', onMouseMove);
             newOb.onmouseup = null;
             priceText.innerHTML = Number(priceText.textContent) + price;
